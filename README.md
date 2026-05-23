@@ -148,9 +148,9 @@ cp .env.example .env
 Create a `.env` file with your Snowflake credentials:
 
 ```env
-SNOWFLAKE_ACCOUNT=your_account
-SNOWFLAKE_USER=your_username
-SNOWFLAKE_PASSWORD=your_password
+SNOWFLAKE_ACCOUNT=izc59408.us-east-1
+SNOWFLAKE_USER=Jeetd123
+SNOWFLAKE_PASSWORD=Jeetdave123#45
 SNOWFLAKE_WAREHOUSE=RETAIL_WH
 SNOWFLAKE_DATABASE=RETAIL_DB
 SNOWFLAKE_SCHEMA=RAW
