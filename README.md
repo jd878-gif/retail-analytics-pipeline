@@ -168,7 +168,7 @@ amounts.
 Create a `.env` file with your Snowflake credentials:
 
 ```env
-SNOWFLAKE_ACCOUNT=izc59408.us-east-1
+SNOWFLAKE_ACCOUNT=<your_account>.<region>
 SNOWFLAKE_USER=your_username
 SNOWFLAKE_PASSWORD=your_password
 SNOWFLAKE_WAREHOUSE=RETAIL_WH
