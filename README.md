@@ -134,7 +134,7 @@ Snowflake_Project/
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/retail-analytics-pipeline.git
+git clone https://github.com/jd878-gif/retail-analytics-pipeline.git
 cd retail-analytics-pipeline
 
 pip install -r requirements.txt
@@ -142,6 +142,26 @@ pip install -r requirements.txt
 cp .env.example .env
 
 ```
+
+## Key Decisions
+
+**Why Snowflake/Snowpark over plain SQL or pandas?** At 500K+ rows, Snowpark let me
+push transformation logic down into Snowflake's compute rather than pulling everything
+into local memory — closer to how this would actually run at production scale.
+
+**Why these 5 analytics tables?** Each answers a specific business question a retail
+team would actually ask: MONTHLY_REVENUE and DAILY_REVENUE for trend tracking,
+TOP_PRODUCTS for inventory/marketing prioritization, COUNTRY_REVENUE for market-level
+decisions, and CUSTOMER_SEGMENTS for targeted retention. Together they cover the
+product, geography, and customer dimensions of the business.
+
+**RFM segmentation thresholds:** I scored each customer 1-4 on Recency (last order
+≤30/90/180 days), Frequency (≥10/5/2 orders), and Monetary value (≥$1000/$500/$100
+lifetime revenue), then combined the three scores into a single segment. The
+thresholds are deliberately simple, fixed cutoffs rather than data-driven quantile
+splits — a reasonable first pass, though a production version would likely bucket
+by percentile within the actual customer distribution instead of hardcoded dollar
+amounts.
 
 ### Environment Setup
 
