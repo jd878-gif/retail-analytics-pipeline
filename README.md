@@ -7,7 +7,6 @@ retail transactions to surface actionable business insights.
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![Snowflake](https://img.shields.io/badge/Snowflake-Data_Warehouse-29B5E8)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)
-![Apache Airflow](https://img.shields.io/badge/Apache-Airflow-017CEE)
 
 ---
 
